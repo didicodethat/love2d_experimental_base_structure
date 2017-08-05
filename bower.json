@@ -1,0 +1,24 @@
+{
+  "name": "basegame_second",
+  "authors": [
+    "Mauricio Fidalgo Garcia <mauricio.fidalgo1@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "serpent": "https://github.com/pkulchenko/serpent.git",
+    "middleclass": "https://github.com/kikito/middleclass.git#^4.1.0",
+    "beholder": "https://github.com/kikito/beholder.lua.git#^2.1.1",
+    "Lua-Collections": "https://github.com/ImLiam/Lua-Collections.git",
+    "lua-term": "https://github.com/hoelzro/lua-term.git"
+  }
+}
