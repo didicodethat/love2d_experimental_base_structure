@@ -1,3 +1,6 @@
+local frameEvent
+local drawEvent
+
 function love.load()
     require 'globals'
 
@@ -5,6 +8,19 @@ function love.load()
         require 'tests'
         love.event.quit()
     end
-    
-    GlobalEventer:publish(Events.LoadEvent:new())
+
+    -- Init Event Objects
+    frameEvent = Game.Events.FrameEvent:new()
+    drawEvent = Game.Events.DrawEvent:new()
+
+    Game.GlobalEventer:publish(Events.LoadEvent:new())
+end
+
+function love.update(dt)
+    frameEvent.dt = dt
+    Game.GlobalEventer:publish(frameEvent)
+end
+
+function love.draw()
+    Game.GlobalEventer:publish(drawEvent)
 end

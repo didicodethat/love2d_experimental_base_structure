@@ -13,4 +13,10 @@ function helpers.wrapWithColor(text, colorName)
     return termColors[colorName] .. text .. termColors.reset
 end
 
+function helpers.bind(object, fn, arg)
+    return function()
+        return object[fn](object, arg)
+    end
+end
+
 return helpers

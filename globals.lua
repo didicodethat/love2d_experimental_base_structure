@@ -20,6 +20,5 @@ assertInstanceOf = assertions.assertInstanceOf
 -- Base Classes
 Base = require('src.base.index')
 
--- Global Eventer
-GlobalEventer = require('src.game.global_eventer')
-Events = require('src.game.events.index')
+-- Game
+Game = require('src.game.index')

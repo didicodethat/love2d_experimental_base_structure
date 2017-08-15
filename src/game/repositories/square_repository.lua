@@ -1,0 +1,1 @@
+return SquareRepository = Base.Repository:new(Game.Models.Square)

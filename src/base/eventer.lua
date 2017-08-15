@@ -41,7 +41,7 @@ function Eventer:unsubscribe(eventClass, listener)
 end
 
 function Eventer:publish(event)
-    local listeners = self.eventListeners[event.class]
+    local listeners = self.eventListeners[event.class.name]
 
     if listeners then
         local list = listeners:all()
